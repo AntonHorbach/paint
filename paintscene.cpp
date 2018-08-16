@@ -71,7 +71,7 @@ void paintScene::repaint()
         addLine(i, QPen(background_color, line_width, line_type, Qt::RoundCap));
 }
 
-void paintScene::set_line_type(Qt line_type)
+void paintScene::set_line_type(Qt::PenStyle line_type)
 {
     this->line_type=line_type;
 }

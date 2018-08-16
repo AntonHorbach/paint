@@ -10,7 +10,7 @@ class paintScene : public QGraphicsScene
 {
 
     Q_OBJECT
-    Qt line_type;
+    Qt::PenStyle line_type;
     QPointF previousPoint;
     QColor color;
     qreal line_width;
@@ -27,7 +27,7 @@ public:
     void set_width(qreal);
     void set_background_color(QColor);
     void repaint();
-    void set_line_type(Qt);
+    void set_line_type(Qt::PenStyle);
 };
 
 #endif // PAINTSCENE_H
