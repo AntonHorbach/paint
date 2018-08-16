@@ -79,6 +79,12 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionSolid_line"/>
+   <addaction name="actionDash_Line"/>
+   <addaction name="actionDot_Line"/>
+   <addaction name="actionDash_Dot_Line"/>
+   <addaction name="actionDash_Dot_Dot_Line"/>
+   <addaction name="actionCustom_Dash_Line"/>
   </widget>
   <action name="actionOpen_image">
    <property name="text">
@@ -139,8 +145,82 @@
     <string>Set background color</string>
    </property>
   </action>
+  <action name="actionSolid_line">
+   <property name="icon">
+    <iconset resource="lines.qrc">
+     <normaloff>:/pict/proxy.duckduckgo.com.png</normaloff>:/pict/proxy.duckduckgo.com.png</iconset>
+   </property>
+   <property name="text">
+    <string>Solid line</string>
+   </property>
+   <property name="toolTip">
+    <string>set solid line</string>
+   </property>
+  </action>
+  <action name="actionDash_Line">
+   <property name="icon">
+    <iconset resource="lines.qrc">
+     <normaloff>:/pict/dashline.png</normaloff>:/pict/dashline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dash Line</string>
+   </property>
+   <property name="toolTip">
+    <string>Set Dash Line</string>
+   </property>
+  </action>
+  <action name="actionDot_Line">
+   <property name="icon">
+    <iconset resource="lines.qrc">
+     <normaloff>:/pict/dotline.png</normaloff>:/pict/dotline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dot Line</string>
+   </property>
+   <property name="toolTip">
+    <string>Set Dot Line</string>
+   </property>
+  </action>
+  <action name="actionDash_Dot_Line">
+   <property name="icon">
+    <iconset resource="lines.qrc">
+     <normaloff>:/pict/dashdotline.png</normaloff>:/pict/dashdotline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dash Dot Line</string>
+   </property>
+   <property name="toolTip">
+    <string>Set Dash Dot Line</string>
+   </property>
+  </action>
+  <action name="actionDash_Dot_Dot_Line">
+   <property name="icon">
+    <iconset resource="lines.qrc">
+     <normaloff>:/pict/dashdotdotline.png</normaloff>:/pict/dashdotdotline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Dash Dot Dot Line</string>
+   </property>
+   <property name="toolTip">
+    <string>Set Dash Dot Dot Line</string>
+   </property>
+  </action>
+  <action name="actionCustom_Dash_Line">
+   <property name="icon">
+    <iconset resource="lines.qrc">
+     <normaloff>:/pict/customdashline.png</normaloff>:/pict/customdashline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Custom Dash Line</string>
+   </property>
+   <property name="toolTip">
+    <string>Set Custom Dash Line</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="lines.qrc"/>
+ </resources>
  <connections/>
 </ui>

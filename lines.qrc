@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pict/customdashline.png</file>
+        <file>pict/dashdotdotline.png</file>
+        <file>pict/dashdotline.png</file>
+        <file>pict/dashline.png</file>
+        <file>pict/dotline.png</file>
+        <file>pict/proxy.duckduckgo.com.png</file>
+    </qresource>
+</RCC>

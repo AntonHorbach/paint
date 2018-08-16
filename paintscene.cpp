@@ -4,6 +4,8 @@ paintScene::paintScene(QObject *parent) : QGraphicsScene(parent)
 {
     color=Qt::black;
     background_color=Qt::white;
+    line_width=1.0;
+    line_type=Qt::SolidLine;
 }
 
 paintScene::~paintScene()
@@ -32,12 +34,12 @@ void paintScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     if(event->buttons() & Qt::LeftButton){
         addLine(previousPoint.x(), previousPoint.y(), event->scenePos().x(),
-                event->scenePos().y(), QPen(color, line_width, Qt::SolidLine, Qt::RoundCap));
+                event->scenePos().y(), QPen(color, line_width, line_type, Qt::RoundCap));
         previousPoint = event->scenePos();
     }
     else if(event->buttons() & Qt::RightButton){
         addLine(previousPoint.x(), previousPoint.y(), event->scenePos().x(),
-                event->scenePos().y(), QPen(background_color, line_width, Qt::SolidLine, Qt::RoundCap));
+                event->scenePos().y(), QPen(background_color, line_width, line_type, Qt::RoundCap));
         previousPoint = event->scenePos();
 
         lines_points.push_back(QLineF(previousPoint.x(), previousPoint.y(), event->scenePos().x(),
@@ -66,5 +68,10 @@ void paintScene::repaint()
         addEllipse(i, QPen(Qt::NoPen), QBrush(background_color));
 
     for(auto i:lines_points)
-        addLine(i, QPen(background_color, line_width, Qt::SolidLine, Qt::RoundCap));
+        addLine(i, QPen(background_color, line_width, line_type, Qt::RoundCap));
+}
+
+void paintScene::set_line_type(Qt line_type)
+{
+    this->line_type=line_type;
 }

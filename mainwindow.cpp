@@ -68,3 +68,33 @@ void MainWindow::on_actionBackground_triggered()
     scene->set_background_color(scene->backgroundBrush().color());
     scene->repaint();
 }
+
+void MainWindow::on_actionSolid_line_triggered()
+{
+    scene->set_line_type(Qt::SolidLine);
+}
+
+void MainWindow::on_actionDash_Line_triggered()
+{
+    scene->set_line_type(Qt::DashLine);
+}
+
+void MainWindow::on_actionDot_Line_triggered()
+{
+    scene->set_line_type(Qt::DotLine);
+}
+
+void MainWindow::on_actionDash_Dot_Line_triggered()
+{
+    scene->set_line_type(Qt::DashDotLine);
+}
+
+void MainWindow::on_actionDash_Dot_Dot_Line_triggered()
+{
+    scene->set_line_type(Qt::DashDotDotLine);
+}
+
+void MainWindow::on_actionCustom_Dash_Line_triggered()
+{
+    scene->set_line_type(Qt::CustomDashLine);
+}

@@ -36,7 +36,12 @@ FORMS += \
         mainwindow.ui
 
 DISTFILES += \
-    E:/HS/proxy.duckduckgo.com.jpg
+    pict/customdashline.png \
+    pict/dashdotdotline.png \
+    pict/dashdotline.png \
+    pict/dashline.png \
+    pict/dotline.png \
+    pict/proxy.duckduckgo.com.png
 
 RESOURCES += \
-    pen.qrc
+    lines.qrc
