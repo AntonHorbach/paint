@@ -19,6 +19,11 @@ void paintScene::mousePressEvent(QGraphicsSceneMouseEvent *event)
         addEllipse(event->scenePos().x()-line_width/2, event->scenePos().y()-line_width/2,
                    line_width, line_width, QPen(Qt::NoPen), QBrush(color));
         previousPoint = event->scenePos();
+
+        for(size_t i=0; i<ellipses_points.size(); i++)
+            if(QRectF(event->scenePos().x()-line_width/2, event->scenePos().y()-line_width/2,
+                      line_width, line_width) == ellipses_points[i])
+               ellipses_points.erase(ellipses_points.begin()+i);
     }
     else if(event->button()==Qt::RightButton){
         addEllipse(event->scenePos().x()-line_width/2, event->scenePos().y()-line_width/2,
@@ -36,6 +41,11 @@ void paintScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
         addLine(previousPoint.x(), previousPoint.y(), event->scenePos().x(),
                 event->scenePos().y(), QPen(color, line_width, line_type, Qt::RoundCap));
         previousPoint = event->scenePos();
+
+        for(size_t i=0; i<lines_points.size(); i++)
+            if(QLineF(previousPoint.x(), previousPoint.y(), event->scenePos().x(),
+                      event->scenePos().y()) == lines_points[i])
+               lines_points.erase(lines_points.begin()+i);
     }
     else if(event->buttons() & Qt::RightButton){
         addLine(previousPoint.x(), previousPoint.y(), event->scenePos().x(),
@@ -64,6 +74,7 @@ void paintScene::set_background_color(QColor background_color)
 
 void paintScene::repaint()
 {
+    qDebug()<<background_color;
     for(auto i:ellipses_points)
         addEllipse(i, QPen(Qt::NoPen), QBrush(background_color));
 
