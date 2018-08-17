@@ -138,7 +138,7 @@
   </action>
   <action name="actionSolid_line">
    <property name="icon">
-    <iconset>
+    <iconset resource="lines_pict.qrc">
      <normaloff>:/pict/proxy.duckduckgo.com.png</normaloff>:/pict/proxy.duckduckgo.com.png</iconset>
    </property>
    <property name="text">
@@ -150,7 +150,7 @@
   </action>
   <action name="actionDash_Line">
    <property name="icon">
-    <iconset>
+    <iconset resource="lines_pict.qrc">
      <normaloff>:/pict/dashline.png</normaloff>:/pict/dashline.png</iconset>
    </property>
    <property name="text">
@@ -162,7 +162,7 @@
   </action>
   <action name="actionDot_Line">
    <property name="icon">
-    <iconset>
+    <iconset resource="lines_pict.qrc">
      <normaloff>:/pict/dotline.png</normaloff>:/pict/dotline.png</iconset>
    </property>
    <property name="text">
@@ -174,7 +174,7 @@
   </action>
   <action name="actionDash_Dot_Line">
    <property name="icon">
-    <iconset>
+    <iconset resource="lines_pict.qrc">
      <normaloff>:/pict/dashdotline.png</normaloff>:/pict/dashdotline.png</iconset>
    </property>
    <property name="text">
@@ -186,7 +186,7 @@
   </action>
   <action name="actionDash_Dot_Dot_Line">
    <property name="icon">
-    <iconset>
+    <iconset resource="lines_pict.qrc">
      <normaloff>:/pict/dashdotdotline.png</normaloff>:/pict/dashdotdotline.png</iconset>
    </property>
    <property name="text">
@@ -198,7 +198,7 @@
   </action>
   <action name="actionCustom_Dash_Line">
    <property name="icon">
-    <iconset>
+    <iconset resource="lines_pict.qrc">
      <normaloff>:/pict/customdashline.png</normaloff>:/pict/customdashline.png</iconset>
    </property>
    <property name="text">
@@ -210,6 +210,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="lines_pict.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -24,6 +24,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionOpen_image_triggered()
 {
+    if(!scene->isEmpty()){
+        on_actionSave_triggered();
+        on_actionClear_triggered();
+    }
+
     QPixmap pixmap(QFileDialog::getOpenFileName(this, "Open image", ".jpg"));
     scene->addPixmap(pixmap);
     scene->setSceneRect(0, 0, pixmap.width(), pixmap.height());
@@ -44,7 +49,7 @@ void MainWindow::on_actionSave_triggered()
 
 void MainWindow::on_actionExit_triggered()
 {
-    this->close();
+    close();
 }
 
 void MainWindow::on_actionColor_triggered()
@@ -60,6 +65,7 @@ void MainWindow::on_actionWidth_triggered()
 void MainWindow::on_actionClear_triggered()
 {
     scene->clear();
+    scene->set_empty();
 }
 
 void MainWindow::on_actionSolid_line_triggered()
