@@ -34,6 +34,7 @@ private slots:
     void on_actionDash_Dot_Line_triggered();
     void on_actionDash_Dot_Dot_Line_triggered();
     void on_actionCustom_Dash_Line_triggered();
+    void on_actionNew_triggered();
 };
 
 #endif // MAINWINDOW_H

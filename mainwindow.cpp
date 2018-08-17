@@ -49,6 +49,11 @@ void MainWindow::on_actionSave_triggered()
 
 void MainWindow::on_actionExit_triggered()
 {
+    if(!scene->isEmpty()){
+        on_actionSave_triggered();
+        on_actionClear_triggered();
+    }
+
     close();
 }
 
@@ -96,4 +101,10 @@ void MainWindow::on_actionDash_Dot_Dot_Line_triggered()
 void MainWindow::on_actionCustom_Dash_Line_triggered()
 {
     scene->set_line_type(Qt::CustomDashLine);
+}
+
+void MainWindow::on_actionNew_triggered()
+{
+    ui->graphicsView->resize(this->width(), this->height()-40);
+    scene->setSceneRect(0, 0, ui->graphicsView->width()-10, ui->graphicsView->height()-10);
 }

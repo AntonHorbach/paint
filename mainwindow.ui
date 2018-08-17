@@ -38,6 +38,7 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionNew"/>
     <addaction name="actionOpen_image"/>
     <addaction name="actionSave"/>
     <addaction name="actionExit"/>
@@ -206,6 +207,17 @@
    </property>
    <property name="toolTip">
     <string>Set Custom Dash Line</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>Create Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
    </property>
   </action>
  </widget>
