@@ -54,7 +54,6 @@
      <string>Scene</string>
     </property>
     <addaction name="actionClear"/>
-    <addaction name="actionBackground"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuScene"/>
@@ -137,17 +136,9 @@
     <string>Clear scene</string>
    </property>
   </action>
-  <action name="actionBackground">
-   <property name="text">
-    <string>Background</string>
-   </property>
-   <property name="toolTip">
-    <string>Set background color</string>
-   </property>
-  </action>
   <action name="actionSolid_line">
    <property name="icon">
-    <iconset resource="lines.qrc">
+    <iconset>
      <normaloff>:/pict/proxy.duckduckgo.com.png</normaloff>:/pict/proxy.duckduckgo.com.png</iconset>
    </property>
    <property name="text">
@@ -159,7 +150,7 @@
   </action>
   <action name="actionDash_Line">
    <property name="icon">
-    <iconset resource="lines.qrc">
+    <iconset>
      <normaloff>:/pict/dashline.png</normaloff>:/pict/dashline.png</iconset>
    </property>
    <property name="text">
@@ -171,7 +162,7 @@
   </action>
   <action name="actionDot_Line">
    <property name="icon">
-    <iconset resource="lines.qrc">
+    <iconset>
      <normaloff>:/pict/dotline.png</normaloff>:/pict/dotline.png</iconset>
    </property>
    <property name="text">
@@ -183,7 +174,7 @@
   </action>
   <action name="actionDash_Dot_Line">
    <property name="icon">
-    <iconset resource="lines.qrc">
+    <iconset>
      <normaloff>:/pict/dashdotline.png</normaloff>:/pict/dashdotline.png</iconset>
    </property>
    <property name="text">
@@ -195,7 +186,7 @@
   </action>
   <action name="actionDash_Dot_Dot_Line">
    <property name="icon">
-    <iconset resource="lines.qrc">
+    <iconset>
      <normaloff>:/pict/dashdotdotline.png</normaloff>:/pict/dashdotdotline.png</iconset>
    </property>
    <property name="text">
@@ -207,7 +198,7 @@
   </action>
   <action name="actionCustom_Dash_Line">
    <property name="icon">
-    <iconset resource="lines.qrc">
+    <iconset>
      <normaloff>:/pict/customdashline.png</normaloff>:/pict/customdashline.png</iconset>
    </property>
    <property name="text">
@@ -219,8 +210,6 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="lines.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

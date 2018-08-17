@@ -62,13 +62,6 @@ void MainWindow::on_actionClear_triggered()
     scene->clear();
 }
 
-void MainWindow::on_actionBackground_triggered()
-{
-    scene->setBackgroundBrush(QBrush(QColorDialog::getColor()));
-    scene->set_background_color(scene->backgroundBrush().color());
-    scene->repaint();
-}
-
 void MainWindow::on_actionSolid_line_triggered()
 {
     scene->set_line_type(Qt::SolidLine);

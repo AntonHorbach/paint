@@ -15,9 +15,6 @@ class paintScene : public QGraphicsScene
     QPointF previousPoint;
     QColor color;
     qreal line_width;
-    QColor background_color;
-    std::vector<QRectF> ellipses_points;
-    std::vector<QLineF> lines_points;
 
 public:
     explicit paintScene(QObject *parent = 0);
@@ -26,8 +23,6 @@ public:
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
     void set_color(QColor);
     void set_width(qreal);
-    void set_background_color(QColor);
-    void repaint();
     void set_line_type(Qt::PenStyle);
 };
 
