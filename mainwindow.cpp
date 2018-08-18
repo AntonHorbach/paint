@@ -17,6 +17,19 @@ void MainWindow::resizeEvent(QResizeEvent *event)
     scene->setSceneRect(0, 0, ui->graphicsView->width()-10, ui->graphicsView->height()-10);
 }
 
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    check_save();
+}
+
+void MainWindow::check_save()
+{
+    if(!scene->isEmpty()){
+        on_actionSave_triggered();
+        on_actionClear_triggered();
+    }
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -24,10 +37,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionOpen_image_triggered()
 {
-    if(!scene->isEmpty()){
-        on_actionSave_triggered();
-        on_actionClear_triggered();
-    }
+    check_save();
 
     QPixmap pixmap(QFileDialog::getOpenFileName(this, "Open image", ".jpg"));
     scene->addPixmap(pixmap);
@@ -49,11 +59,7 @@ void MainWindow::on_actionSave_triggered()
 
 void MainWindow::on_actionExit_triggered()
 {
-    if(!scene->isEmpty()){
-        on_actionSave_triggered();
-        on_actionClear_triggered();
-    }
-
+    check_save();
     close();
 }
 
@@ -105,6 +111,7 @@ void MainWindow::on_actionCustom_Dash_Line_triggered()
 
 void MainWindow::on_actionNew_triggered()
 {
+    check_save();
     ui->graphicsView->resize(this->width(), this->height()-40);
     scene->setSceneRect(0, 0, ui->graphicsView->width()-10, ui->graphicsView->height()-10);
 }

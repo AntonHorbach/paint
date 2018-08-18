@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QtWidgets>
 #include <QResizeEvent>
+#include <QCloseEvent>
 #include <QGraphicsPixmapItem>
 #include "paintscene.h"
 
@@ -20,6 +21,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     void resizeEvent(QResizeEvent *event);
+    void closeEvent(QCloseEvent *event);
+    void check_save();
     ~MainWindow();
 private slots:
     void on_actionOpen_image_triggered();
